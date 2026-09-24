@@ -1,0 +1,191 @@
+:root {
+    --rz-primary: #1d4ed8;
+    --rz-primary-lighter: #eff6ff;
+    --rz-secondary: #64748b;
+    --rz-success: #10b981;
+    --rz-danger: #ef4444;
+    --rz-warning: #f59e0b;
+    --fieldops-touch-target: 40px;
+    --fieldops-navy-primary: #0f172a;
+    --fieldops-navy-dark: #081225;
+    --fieldops-card-border: #e2e8f0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+.rz-body {
+    background-color: #f8fafc !important;
+    color: #0f172a;
+}
+
+/* Touch Targets */
+.rz-button, .rz-textbox, .rz-dropdown, button {
+    min-height: var(--fieldops-touch-target);
+}
+
+.rz-button-text {
+    font-weight: 600;
+}
+
+/* FieldOps Standard Card Background Surface */
+.rz-card, .stat-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid var(--fieldops-card-border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* User Menu Header Card */
+.fieldops-user-menu-header {
+    background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Draft / Notice Alert Card */
+.rz-card.draft-warning {
+    background: #fffbeb;
+    border-left: 6px solid #f59e0b;
+}
+
+/* Unauthenticated Landing Card */
+.auth-landing-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* High Contrast / Tally Mode Support */
+html.fieldops-tally-mode body {
+    background: #020617;
+    color: #f8fafc;
+}
+
+html.fieldops-tally-mode .rz-card,
+html.fieldops-tally-mode .stat-card {
+    background: linear-gradient(180deg, #111827 0%, #0f172a 100%);
+    color: #f8fafc;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow: 0 18px 48px rgba(2, 6, 23, 0.42);
+}
+
+html.fieldops-tally-mode .rz-textbox,
+html.fieldops-tally-mode .rz-dropdown,
+html.fieldops-tally-mode .rz-numeric {
+    background: #020617;
+    color: #f8fafc;
+    border-color: #64748b;
+}
+
+/* Large Text Mode Accessibility */
+html.fieldops-large-text {
+    font-size: 112.5%;
+}
+
+/* Modal Overlay & Dialog Systems */
+.fieldops-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.fieldops-modal-content {
+    background: white;
+    border-radius: 1.25rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    max-height: 90vh;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 2001;
+}
+
+/* User Overlay Dropdown */
+.fieldops-user-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1050;
+    background: transparent;
+}
+
+.fieldops-user-menu {
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    width: 280px;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+    z-index: 1051;
+    overflow: hidden;
+}
+
+/* Mobile Stepper Flow Styles */
+.visit-flow-stepper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+.visit-flow-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.visit-flow-step.active .visit-flow-circle {
+    background-color: var(--rz-primary);
+    border-color: var(--rz-primary);
+    color: white;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+.visit-flow-step.completed .visit-flow-circle {
+    background-color: var(--rz-success);
+    border-color: var(--rz-success);
+    color: white;
+}
+
+/* Blazor Error UI */
+#blazor-error-ui {
+    background: #fffbeb;
+    color: #b45309;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 3000;
+}

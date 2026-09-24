@@ -1,0 +1,9 @@
+{
+  "name": "Business Accounting Mobile",
+  "short_name": "BusinessApp",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#1e293b",
+  "icons": []
+}
